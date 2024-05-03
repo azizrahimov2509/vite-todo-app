@@ -1,0 +1,33 @@
+header{
+    background-color: blue;
+    color: #fff;
+    padding: 12px 0;
+  }
+  .header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo{
+    font-size: 30px;
+  }
+  .list{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+
+  
+  .list li a:hover{
+   opacity: 0.8;
+  }
+
+  span{
+    color: orange;
+  }
+
+  .signIn:hover{
+   color: rgb(255, 166, 0);
+  }
