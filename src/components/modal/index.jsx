@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 
 export default function Modal({ closeModal, itemId, setTodos, currentItemText }) {
-  const [text, setText] = useState(currentItemText); 
+  const [text, setText] = useState(currentItemText || ''); 
 
   function handleSubmit(event) {
     event.preventDefault();

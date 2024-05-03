@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <Main setShowModal={setShowModal} />
+      <Main setShowModal={setShowModal} todos={todos} setTodos={setTodos} />
       <Footer />
       {showModal.show && (
         <Modal 

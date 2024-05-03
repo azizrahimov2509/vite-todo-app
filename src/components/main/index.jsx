@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import "./style.css";
 
 
-function Main({setShowModal}){
-   const [todos,setTodos] = useState([]);
+function Main({setShowModal,todos,setTodos}){
+
    const [text, setText] = useState("");
    
 
