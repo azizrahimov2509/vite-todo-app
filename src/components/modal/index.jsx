@@ -4,10 +4,12 @@ import "./style.css";
 export default function Modal({ closeModal, itemId, setTodos, currentItemText }) {
   const [text, setText] = useState(currentItemText || ''); 
 
+  const { todoId } = itemId;
+
   function handleSubmit(event) {
     event.preventDefault();
     setTodos(prev => prev.map(item => {
-      if (item.id === itemId) {
+      if (item.id === todoId) {
         return { ...item, text }; 
       }
       return item;
@@ -39,7 +41,7 @@ export default function Modal({ closeModal, itemId, setTodos, currentItemText })
           </form>
         </div>
       </div>
-      <div id="overlay" className="overlay hidden"></div>
+      
     </>
   );
 }

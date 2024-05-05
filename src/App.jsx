@@ -1,29 +1,25 @@
-import React, { useState } from 'react';
-import "./App.css"; 
-import Header from "./components/header";
-import Main from "./components/main";
-import Footer from "./components/footer";
-import Modal from "./components/modal";
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom";
+import Home from "./components/pages/home";
+import About from "./components/pages/about";
+import Todos from "./components/Todos";
 
-function App() {
-  const [showModal, setShowModal] = useState({ show: false, todoId: ""});
-  const [todos, setTodos] = useState([]); 
+export default function App() {
 
-  return (
-    <>
-      <Header />
-      <Main setShowModal={setShowModal} todos={todos} setTodos={setTodos} />
-      <Footer />
-      {showModal.show && (
-        <Modal 
-          setTodos={setTodos} 
-          itemId={showModal.todoId} 
-          currentItemText={todos.find(todo => todo.id === showModal.todoId)?.text}
-          closeModal={() => setShowModal({ show: false, todoId: "" })} 
-        />
-      )} 
-    </>
+  
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <>
+        <Route path="/" element={<Home/>}>
+        <Route path="/" element={<Todos />}></Route>
+        <Route path="/about" element={<About />}></Route>
+
+        </Route>
+      </>
+    )
   );
+  
+  return <RouterProvider router={router}/>
+
 }
 
-export default App;
+

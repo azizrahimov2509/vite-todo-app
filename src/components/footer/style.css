@@ -4,3 +4,8 @@ footer{
     color: white;
     font-size: 22px;
 }
+.container
+{max-width: 1280px;
+margin-inline: auto;
+font-size: 25px;
+padding: 0 20px;}
