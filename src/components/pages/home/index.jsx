@@ -16,7 +16,7 @@ export default function Home(){
       <Header /> 
 
       <Outlet/>
-      <Main />
+      <Main/>
     
       <Footer/>
       {showModal.show && (
